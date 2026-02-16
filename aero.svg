@@ -1,9 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500">
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="900">
 
-  <!-- === GRADIENTS === -->
-
-  <!-- Oxygen glossy button -->
+  <!-- ===================== -->
+  <!--      GRADIENTS        -->
+  <!-- ===================== -->
   <defs>
+    <!-- Oxygen glossy general surface -->
     <linearGradient id="oxygen-button" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%"  stop-color="#f8fcff"/>
       <stop offset="45%" stop-color="#dbe8f3"/>
@@ -29,54 +30,221 @@
       <stop offset="100%" stop-color="#d6dfe8"/>
     </linearGradient>
 
-    <!-- Aero scrollbar handle glossy -->
+    <!-- Aero glossy handle -->
     <linearGradient id="aero-handle" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#fdfefe"/>
       <stop offset="50%" stop-color="#dce9f5"/>
       <stop offset="100%" stop-color="#c0d4e5"/>
     </linearGradient>
 
-    <!-- Progress chunk -->
+    <!-- Progress chunk (oxygen blue sweep) -->
     <linearGradient id="oxygen-progress" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#80c0ff"/>
       <stop offset="100%" stop-color="#3daee9"/>
     </linearGradient>
+
+    <!-- Toolbar metallic -->
+    <linearGradient id="oxygen-toolbar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#f5f8fa"/>
+      <stop offset="100%" stop-color="#dfe8f0"/>
+    </linearGradient>
+
+    <!-- Menu background (soft porcelain) -->
+    <linearGradient id="menu-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#f7fafc"/>
+      <stop offset="100%" stop-color="#e8eff5"/>
+    </linearGradient>
+
+    <!-- Menu item highlight (oxygen glow) -->
+    <linearGradient id="menu-highlight" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#e8f6ff"/>
+      <stop offset="100%" stop-color="#c9e7ff"/>
+    </linearGradient>
   </defs>
 
-
-  <!-- === BUTTONS === -->
-
-  <!-- normal -->
+  <!-- ===================== -->
+  <!--        BUTTONS        -->
+  <!-- ===================== -->
   <rect id="button" x="10" y="10" width="140" height="32" rx="6" ry="6"
         fill="url(#oxygen-button)" stroke="#8ea9bd" stroke-width="1"/>
-
-  <!-- hover -->
-  <rect id="button-hover" x="10" y="60" width="140" height="32" rx="6" ry="6"
+  <rect id="button-hover" x="10" y="52" width="140" height="32" rx="6" ry="6"
         fill="url(#oxygen-hover)" stroke="#6cbaff" stroke-width="1"/>
-
-  <!-- pressed -->
-  <rect id="button-pressed" x="10" y="110" width="140" height="32" rx="6" ry="6"
+  <rect id="button-pressed" x="10" y="94" width="140" height="32" rx="6" ry="6"
         fill="url(#oxygen-pressed)" stroke="#5f7f9b" stroke-width="1"/>
 
+  <!-- ===================== -->
+  <!--   CHECKBOX & RADIO    -->
+  <!-- ===================== -->
+  <!-- Checkboxes -->
+  <g id="checkbox" transform="translate(180,10)">
+    <rect width="20" height="20" rx="4" ry="4"
+          fill="url(#oxygen-button)" stroke="#8aa6ba" stroke-width="1"/>
+  </g>
+  <g id="checkbox-hover" transform="translate(210,10)">
+    <rect width="20" height="20" rx="4" ry="4"
+          fill="url(#oxygen-hover)" stroke="#6cbaff" stroke-width="1"/>
+  </g>
+  <g id="checkbox-checked" transform="translate(240,10)">
+    <rect width="20" height="20" rx="4" ry="4"
+          fill="url(#oxygen-button)" stroke="#3daee9" stroke-width="1"/>
+    <path d="M4 10 L8 14 L16 6" stroke="#3daee9" stroke-width="3"
+          fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
 
-  <!-- === SCROLLBARS (Aero style) === -->
+  <!-- Radios -->
+  <g id="radio" transform="translate(180,52)">
+    <circle cx="10" cy="10" r="9" fill="url(#oxygen-button)"
+            stroke="#8ea9bd" stroke-width="1"/>
+  </g>
+  <g id="radio-hover" transform="translate(210,52)">
+    <circle cx="10" cy="10" r="9" fill="url(#oxygen-hover)"
+            stroke="#6cbaff" stroke-width="1"/>
+  </g>
+  <g id="radio-checked" transform="translate(240,52)">
+    <circle cx="10" cy="10" r="9" fill="url(#oxygen-button)"
+            stroke="#3daee9" stroke-width="1"/>
+    <circle cx="10" cy="10" r="4" fill="#3daee9"/>
+  </g>
 
-  <!-- scrollbar handle -->
-  <rect id="scroll-handle" x="200" y="10" width="26" height="60" rx="5" ry="5"
+  <!-- ===================== -->
+  <!--       COMBOBOX        -->
+  <!-- ===================== -->
+  <g id="combo" transform="translate(10,150)">
+    <rect width="160" height="28" rx="4" ry="4"
+          fill="url(#oxygen-button)" stroke="#8ea9bd" stroke-width="1"/>
+  </g>
+  <g id="combo-hover" transform="translate(10,184)">
+    <rect width="160" height="28" rx="4" ry="4"
+          fill="url(#oxygen-hover)" stroke="#6cbaff" stroke-width="1"/>
+  </g>
+  <g id="combo-pressed" transform="translate(10,218)">
+    <rect width="160" height="28" rx="4" ry="4"
+          fill="url(#oxygen-pressed)" stroke="#5f7f9b" stroke-width="1"/>
+  </g>
+  <!-- Shared arrow for combo/list -->
+  <g id="arrow-down" transform="translate(178,156)">
+    <path d="M5 8 L10 14 L15 8" fill="#4a6d89" stroke="#2f4354" stroke-width="1"/>
+  </g>
+
+  <!-- ===================== -->
+  <!--         TABS          -->
+  <!-- ===================== -->
+  <g id="tab" transform="translate(10,270)">
+    <rect width="120" height="28" rx="4" ry="4"
+          fill="url(#oxygen-button)" stroke="#8ea9bd" stroke-width="1"/>
+  </g>
+  <g id="tab-hover" transform="translate(140,270)">
+    <rect width="120" height="28" rx="4" ry="4"
+          fill="url(#oxygen-hover)" stroke="#80c6ff" stroke-width="1"/>
+  </g>
+  <g id="tab-selected" transform="translate(270,270)">
+    <rect width="120" height="28" rx="4" ry="4"
+          fill="url(#oxygen-hover)" stroke="#6cbaff" stroke-width="1"/>
+    <rect x="2" y="2" width="116" height="2" fill="#ffffff" opacity="0.55"/>
+  </g>
+
+  <!-- ===================== -->
+  <!--        TOOLBAR        -->
+  <!-- ===================== -->
+  <g id="toolbar" transform="translate(10,320)">
+    <rect width="300" height="32" fill="url(#oxygen-toolbar)"
+          stroke="#c0ced8" stroke-width="1"/>
+  </g>
+  <g id="separator" transform="translate(315,320)">
+    <rect width="1" height="32" fill="#b8c4cf"/>
+    <rect x="1" width="1" height="32" fill="#ffffff" opacity="0.35"/>
+  </g>
+
+  <!-- ===================== -->
+  <!--       SCROLLBARS      -->
+  <!-- ===================== -->
+  <rect id="scroll-groove" x="360" y="10" width="26" height="120" rx="5" ry="5"
+        fill="url(#aero-track)" stroke="#b5c3cf" stroke-width="1"/>
+  <rect id="scroll-handle" x="320" y="10" width="26" height="60" rx="5" ry="5"
         fill="url(#aero-handle)" stroke="#879bad" stroke-width="1"/>
 
-  <!-- scrollbar groove -->
-  <rect id="scroll-groove" x="240" y="10" width="26" height="100" rx="5" ry="5"
-        fill="url(#aero-track)" stroke="#b5c3cf" stroke-width="1"/>
+  <!-- ===================== -->
+  <!--         SLIDER        -->
+  <!-- ===================== -->
+  <circle id="slider-handle" cx="420" cy="40" r="12"
+          fill="url(#oxygen-button)" stroke="#8aa6ba" stroke-width="1"/>
 
+  <!-- ===================== -->
+  <!--      PROGRESSBAR      -->
+  <!-- ===================== -->
+  <rect id="progress-chunk" x="10" y="370" width="190" height="14" rx="2" ry="2"
+        fill="url(#oxygen-progress)"/>
 
-  <!-- === SLIDER HANDLE === -->
-  <circle id="slider-handle" cx="300" cy="50" r="12"
-        fill="url(#oxygen-button)" stroke="#8aa6ba" stroke-width="1"/>
+  <!-- ===================== -->
+  <!--          MENUS        -->
+  <!-- ===================== -->
 
+  <!-- Menu background/frame -->
+  <g id="menu" transform="translate(10,410)">
+    <rect width="220" height="160" rx="6" ry="6"
+          fill="url(#menu-bg)" stroke="#c4d1dc" stroke-width="1"/>
+  </g>
 
-  <!-- === PROGRESSBAR CHUNK === -->
-  <rect id="progress-chunk" x="10" y="170" width="160" height="14"
-        fill="url(#oxygen-progress)" rx="2" ry="2"/>
+  <!-- Menu item (normal) -->
+  <g id="menu-item" transform="translate(15,420)">
+    <rect width="210" height="26" rx="4" ry="4" fill="none" opacity="1"/>
+  </g>
+
+  <!-- Menu item (hover/selected highlight) -->
+  <g id="menu-item-hover" transform="translate(15,452)">
+    <rect width="210" height="26" rx="4" ry="4"
+          fill="url(#menu-highlight)" stroke="#6cbaff" stroke-width="1"/>
+    <!-- thin top gloss line -->
+    <rect x="2" y="2" width="206" height="2" fill="#ffffff" opacity="0.6"/>
+  </g>
+  <g id="menu-item-selected" transform="translate(15,484)">
+    <rect width="210" height="26" rx="4" ry="4"
+          fill="url(#menu-highlight)" stroke="#5aaef0" stroke-width="1"/>
+  </g>
+
+  <!-- Menu separator -->
+  <g id="menu-separator" transform="translate(20,516)">
+    <rect width="200" height="1" fill="#b8c4cf"/>
+    <rect y="1" width="200" height="1" fill="#ffffff" opacity="0.35"/>
+  </g>
+
+  <!-- Menu checkmark (for checked items) -->
+  <g id="menu-checkmark" transform="translate(22,456)">
+    <path d="M2 10 L6 14 L14 4" stroke="#2e95e6" stroke-width="2.2"
+          fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Submenu arrow (right) -->
+  <g id="menu-submenu-arrow" transform="translate(200,456)">
+    <path d="M2 4 L10 10 L2 16" fill="#4a6d89" stroke="#2f4354" stroke-width="1"/>
+  </g>
+
+  <!-- Menubar items (optional) -->
+  <g id="menubar-item" transform="translate(260,410)">
+    <rect width="90" height="24" rx="4" ry="4" fill="none" opacity="1"/>
+  </g>
+  <g id="menubar-item-hover" transform="translate(260,440)">
+    <rect width="90" height="24" rx="4" ry="4"
+          fill="url(#menu-highlight)" stroke="#6cbaff" stroke-width="1"/>
+  </g>
+  <g id="menubar-item-selected" transform="translate(260,470)">
+    <rect width="90" height="24" rx="4" ry="4"
+          fill="url(#menu-highlight)" stroke="#5aaef0" stroke-width="1"/>
+  </g>
+
+  <!-- ===================== -->
+  <!--         SHADOWS       -->
+  <!-- ===================== -->
+  <g id="shadow">
+    <ellipse cx="150" cy="15" rx="120" ry="12" fill="#000000" opacity="0.15"/>
+  </g>
+  <g id="shadow-menu">
+    <rect x="0" y="0" width="230" height="170" rx="7" ry="7"
+          fill="#000000" opacity="0.12"/>
+  </g>
+  <g id="shadow-window">
+    <rect x="0" y="0" width="360" height="280" rx="8" ry="8"
+          fill="#000000" opacity="0.18"/>
+  </g>
 
 </svg>

@@ -1,45 +1,46 @@
-[General]
-theme_name=Oxygen2008
-inactive_opacity=0.90
-menu_blur=true
-bg_transparency=0.04
-round=4
-text_margin=4
-animation=false
-inner_shadow=false
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200">
 
-[Button]
-hover_color=#3DAEE9
-pressed_color=#2B86C0
-focus_color=#67C2FF
-round=4
-bg_gradient=true
+  <!-- BUTTON NORMAL -->
+  <rect id="button" width="100" height="32" rx="4" ry="4"
+        fill="url(#btn_grad)" stroke="#7FAFD7" stroke-width="1"/>
 
-[Scrollbar]
-handle_color=#A0B8CE
-hover_color=#C4D6E6
-pressed_color=#85A5BC
-round=4
+  <!-- BUTTON HOVER -->
+  <rect id="button-hover" width="100" height="32" rx="4" ry="4"
+        fill="url(#btn_hover)" stroke="#3DAEE9" stroke-width="1"/>
 
-[Slider]
-groove_color=#D7E2EB
-handle_color=#7FAFD7
-hover_color=#9FC7E8
+  <!-- BUTTON PRESSED -->
+  <rect id="button-pressed" width="100" height="32" rx="4" ry="4"
+        fill="url(#btn_pressed)" stroke="#2B86C0" stroke-width="1"/>
 
-[Progressbar]
-chunk_color=#3DAEE9
-bg_color=#D6DFE5
+  <!-- SCROLLBAR HANDLE -->
+  <rect id="scroll-handle" width="20" height="20" rx="3" ry="3"
+        fill="#A0B8CE" stroke="#7F94A6" stroke-width="1"/>
 
-[Toolbar]
-bg_color=#E6EEF3
-frame_color=#CCD7DE
+  <!-- SLIDER HANDLE -->
+  <circle id="slider-handle" cx="10" cy="10" r="8"
+        fill="#7FAFD7" stroke="#6B8FA2" stroke-width="1"/>
 
-[Menu]
-bg_color=#F0F5F8
-sel_color=#3DAEE9
-text_color=#000000
+  <!-- PROGRESSBAR CHUNK -->
+  <rect id="progress-chunk" width="60" height="10"
+        fill="#3DAEE9"/>
 
-[Window]
-border_width=1
-active_border_color=#5DAFE9
-inactive_border_color=#9ABCD9
+  <!-- GRADIENTS -->
+  <defs>
+    <linearGradient id="btn_grad" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#F4F9FC"/>
+      <stop offset="50%" stop-color="#DCE8F0"/>
+      <stop offset="100%" stop-color="#C7D6E2"/>
+    </linearGradient>
+
+    <linearGradient id="btn_hover" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E6F5FF"/>
+      <stop offset="100%" stop-color="#C4E4FF"/>
+    </linearGradient>
+
+    <linearGradient id="btn_pressed" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#BBD0E2"/>
+      <stop offset="100%" stop-color="#9ABCD1"/>
+    </linearGradient>
+  </defs>
+
+</svg>

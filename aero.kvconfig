@@ -1,45 +1,30 @@
 [General]
 theme_name=Oxygen2008
-inactive_opacity=0.90
+round=6
 menu_blur=true
-bg_transparency=0.04
-round=4
+bg_transparency=0.06
+inactive_opacity=0.92
 text_margin=4
-animation=false
-inner_shadow=false
 
 [Button]
-hover_color=#3DAEE9
-pressed_color=#2B86C0
-focus_color=#67C2FF
-round=4
 bg_gradient=true
+hover_color=#6CB8FF
+pressed_color=#5F7F9B
 
 [Scrollbar]
-handle_color=#A0B8CE
-hover_color=#C4D6E6
-pressed_color=#85A5BC
-round=4
+handle_width=22
+hover_color=#d0e4f4
+pressed_color=#b7c9d7
 
 [Slider]
-groove_color=#D7E2EB
-handle_color=#7FAFD7
-hover_color=#9FC7E8
+hover_color=#a5ccec
+pressed_color=#86a7c0
 
 [Progressbar]
-chunk_color=#3DAEE9
-bg_color=#D6DFE5
-
-[Toolbar]
-bg_color=#E6EEF3
-frame_color=#CCD7DE
-
-[Menu]
-bg_color=#F0F5F8
-sel_color=#3DAEE9
-text_color=#000000
+chunk_color=#3daee9
+bg_color=#d7e4ef
 
 [Window]
+active_border_color=#6BB8FF
+inactive_border_color=#A8BDD0
 border_width=1
-active_border_color=#5DAFE9
-inactive_border_color=#9ABCD9

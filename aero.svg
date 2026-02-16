@@ -1,46 +1,82 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200">
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500">
 
-  <!-- BUTTON NORMAL -->
-  <rect id="button" width="100" height="32" rx="4" ry="4"
-        fill="url(#btn_grad)" stroke="#7FAFD7" stroke-width="1"/>
+  <!-- === GRADIENTS === -->
 
-  <!-- BUTTON HOVER -->
-  <rect id="button-hover" width="100" height="32" rx="4" ry="4"
-        fill="url(#btn_hover)" stroke="#3DAEE9" stroke-width="1"/>
-
-  <!-- BUTTON PRESSED -->
-  <rect id="button-pressed" width="100" height="32" rx="4" ry="4"
-        fill="url(#btn_pressed)" stroke="#2B86C0" stroke-width="1"/>
-
-  <!-- SCROLLBAR HANDLE -->
-  <rect id="scroll-handle" width="20" height="20" rx="3" ry="3"
-        fill="#A0B8CE" stroke="#7F94A6" stroke-width="1"/>
-
-  <!-- SLIDER HANDLE -->
-  <circle id="slider-handle" cx="10" cy="10" r="8"
-        fill="#7FAFD7" stroke="#6B8FA2" stroke-width="1"/>
-
-  <!-- PROGRESSBAR CHUNK -->
-  <rect id="progress-chunk" width="60" height="10"
-        fill="#3DAEE9"/>
-
-  <!-- GRADIENTS -->
+  <!-- Oxygen glossy button -->
   <defs>
-    <linearGradient id="btn_grad" x1="0" x2="0" y1="0" y2="1">
-      <stop offset="0%" stop-color="#F4F9FC"/>
-      <stop offset="50%" stop-color="#DCE8F0"/>
-      <stop offset="100%" stop-color="#C7D6E2"/>
+    <linearGradient id="oxygen-button" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#f8fcff"/>
+      <stop offset="45%" stop-color="#dbe8f3"/>
+      <stop offset="55%" stop-color="#c5d6e5"/>
+      <stop offset="100%" stop-color="#b2c7d8"/>
     </linearGradient>
 
-    <linearGradient id="btn_hover" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#E6F5FF"/>
-      <stop offset="100%" stop-color="#C4E4FF"/>
+    <!-- Hover glow -->
+    <linearGradient id="oxygen-hover" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#e9f7ff"/>
+      <stop offset="100%" stop-color="#badeff"/>
     </linearGradient>
 
-    <linearGradient id="btn_pressed" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#BBD0E2"/>
-      <stop offset="100%" stop-color="#9ABCD1"/>
+    <!-- Pressed -->
+    <linearGradient id="oxygen-pressed" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#b4c8d8"/>
+      <stop offset="100%" stop-color="#9bb2c3"/>
+    </linearGradient>
+
+    <!-- Aero scrollbar track -->
+    <linearGradient id="aero-track" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8eef4"/>
+      <stop offset="100%" stop-color="#d6dfe8"/>
+    </linearGradient>
+
+    <!-- Aero scrollbar handle glossy -->
+    <linearGradient id="aero-handle" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fdfefe"/>
+      <stop offset="50%" stop-color="#dce9f5"/>
+      <stop offset="100%" stop-color="#c0d4e5"/>
+    </linearGradient>
+
+    <!-- Progress chunk -->
+    <linearGradient id="oxygen-progress" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#80c0ff"/>
+      <stop offset="100%" stop-color="#3daee9"/>
     </linearGradient>
   </defs>
+
+
+  <!-- === BUTTONS === -->
+
+  <!-- normal -->
+  <rect id="button" x="10" y="10" width="140" height="32" rx="6" ry="6"
+        fill="url(#oxygen-button)" stroke="#8ea9bd" stroke-width="1"/>
+
+  <!-- hover -->
+  <rect id="button-hover" x="10" y="60" width="140" height="32" rx="6" ry="6"
+        fill="url(#oxygen-hover)" stroke="#6cbaff" stroke-width="1"/>
+
+  <!-- pressed -->
+  <rect id="button-pressed" x="10" y="110" width="140" height="32" rx="6" ry="6"
+        fill="url(#oxygen-pressed)" stroke="#5f7f9b" stroke-width="1"/>
+
+
+  <!-- === SCROLLBARS (Aero style) === -->
+
+  <!-- scrollbar handle -->
+  <rect id="scroll-handle" x="200" y="10" width="26" height="60" rx="5" ry="5"
+        fill="url(#aero-handle)" stroke="#879bad" stroke-width="1"/>
+
+  <!-- scrollbar groove -->
+  <rect id="scroll-groove" x="240" y="10" width="26" height="100" rx="5" ry="5"
+        fill="url(#aero-track)" stroke="#b5c3cf" stroke-width="1"/>
+
+
+  <!-- === SLIDER HANDLE === -->
+  <circle id="slider-handle" cx="300" cy="50" r="12"
+        fill="url(#oxygen-button)" stroke="#8aa6ba" stroke-width="1"/>
+
+
+  <!-- === PROGRESSBAR CHUNK === -->
+  <rect id="progress-chunk" x="10" y="170" width="160" height="14"
+        fill="url(#oxygen-progress)" rx="2" ry="2"/>
 
 </svg>
